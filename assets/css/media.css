@@ -1,0 +1,80 @@
+@media only screen and (max-width: 1024px) {
+  .sidebar > .sidebar_item > a {
+    font-size: 1.3em;
+  }
+  nav {
+    min-width: 210px;
+    max-width: 210px;
+  }
+}
+@media only screen and (max-width: 920px) {
+  .sidebar > .sidebar_item > a{
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  nav {
+    min-width: 75px;
+    max-width: 75px;
+  }
+  .sidebar > .sidebar_item > a >img {
+    width: 25px;
+    height: 25px;
+    margin: 0;
+  }
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  .tooltip .tooltip_text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #848080;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 14px;
+
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .tooltip_left .tooltip_text{
+    left: 120px;
+  }
+  .tooltip_right .tooltip_text{
+    left: -45px;
+  }
+  .tooltip .tooltip_text::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #848080 transparent transparent transparent;
+  }
+  .tooltip_left .tooltip_text::after{
+    transform: rotate(90deg);
+    margin-left: -70px;
+  }
+  .tooltip_right .tooltip_text::after{
+    transform: rotate(-90deg);
+    margin-left: 60px;
+  }
+  .tooltip:hover .tooltip_text {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 580px) {
+  main p{
+    font-size: 0.9em;
+  }
+}
